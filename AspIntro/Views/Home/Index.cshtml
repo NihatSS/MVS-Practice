@@ -1,0 +1,64 @@
+﻿@model List<StudentVM>
+
+@{
+	ViewBag.title = "Home";
+}
+
+@* @{
+	string pageName = "Home Page";
+	string[] names = { "Nihat", "Valeh", "Ferdi", "Aqil" };
+} *@
+
+<h1>Home Page</h1>
+@* 
+@foreach (var item in Model)
+{
+	<h2>@(item.FullName + " " + @item.Age)</h2>
+} *@
+
+
+
+<h1>@TempData["address"]</h1>
+
+
+
+	@foreach (var item in Model)
+	{
+		<div class="card" style="width:200px; height:100px; background-color:greenyellow; padding:10px;border:1px solid black">
+			<ul>
+
+				<li>@item.FullName</li>
+				<li>@item.Age</li>
+			</ul>
+		</div>
+	}
+
+
+
+
+
+
+
+@* @foreach (var item in Model)
+{
+	<h3>@item</h3>
+
+} *@
+
+
+@* @for (int i = 0; i < names.Length; i++)
+{
+	<h3>@names[i]</h3>
+}
+
+
+@foreach (var item in names)
+{
+	<h3>@item</h3>
+} *@
+
+@* <ul>
+	<li>Home</li>
+	<li>About</li>
+</ul> *@
+
